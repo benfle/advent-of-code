@@ -2,10 +2,7 @@
   "Day 3: Lobby
 
   See https://adventofcode.com/2025/day/3"
-  (:require [clojure.string :as str]
-            [clojure.edn :as edn]
-            [clojure.math :as math]
-            [advent-of-code.utils :refer [input]]))
+  (:require [advent-of-code.utils :refer [input]]))
 
 (def banks
   (input 2025 3 str))
