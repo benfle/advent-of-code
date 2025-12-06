@@ -18,17 +18,15 @@
 (defn parse-worksheet
   "The worksheet as a seq of problems."
   [lines parse-problem]
-  (let [max-width (reduce max (map count lines))
-        empty? #(every? #{\ } %)]
+  (let [empty? #(every? #{\ } %)]
     (->> lines
-         (map #(take max-width (concat % (repeat \ ))))
          (apply mapv vector)
          (partition-by empty?)
          (remove #(empty? (first %)))
          (map parse-problem))))
 
 (def worksheet
-  (input 2025 6))
+  (input 2025 6 identity))
 
 (defn parse-problem-1
   [columns]
