@@ -1,2 +1,2 @@
-{:deps {}
+{:deps {org.clojure/math.combinatorics {:mvn/version "0.3.0"}}
  :aliases {:dev {}}}
